@@ -1,0 +1,186 @@
+/* Author: Mitchell Glennie, 000808122 */
+body {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	margin: 0;
+}
+
+.top {
+	position: fixed;
+	top: 0;
+	width:100%;
+}
+
+.header-grid {
+	background: #035781;
+	display: grid;
+	margin-bottom: 0;
+	grid:
+		'logo .'
+		'jmg social';
+}
+.header-cell {
+	padding: 0.5em;
+}
+.header-logo {
+	grid-area: logo;
+}
+.header-logo img {
+	width: 140px;
+}
+.header-jmg {
+	grid-area: jmg;
+}
+.header-jmg .button {
+	padding: 1em;
+	color: white;
+	background: #0172ba;
+	text-decoration: none;
+}
+.header-jmg .button:hover {
+	color: white;
+	text-decoration: underline;
+	background: #f3714a;
+}
+.header-social {
+	grid-area: social;
+	text-align: right;
+}
+
+.nav {
+	background: #002146;
+}
+.nav ul {
+	margin: 0;
+}
+.nav li {
+	display: inline-block;
+	padding: 0.75em 1em;
+	color: #f3714a;
+	background: white;
+	margin: 0.5em 0.5em;
+	border: 0.2em solid #0172ba;
+}
+.nav li:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.container {
+	max-width: 90%;
+	margin-left: 2em;
+	margin-top: 210px;
+	display: grid;
+	grid-template: auto auto auto / 30% 70%;
+	grid-template-areas:
+		'gallery paris'
+		'. top-dest'
+		'vacation vacation'
+		'credits credits';
+	grid-gap: 6em;
+}
+.cell {
+	
+}
+.cell h3 {
+	text-align:center;
+	border-bottom: 1px solid orange;
+}
+.cell-1 {
+	grid-area: gallery;
+}
+.cell-2 {
+	grid-area: paris;
+}
+.img-paris {
+	float: left;
+}
+.img-paris2 {
+	float:right;
+}
+.cell-3 {
+	grid-area: top-dest;
+	border: 2px solid orange;
+	padding: 2em;
+	background: #d9e1e9;
+}
+.destinations {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.cell-4 {
+	grid-area: vacation;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.box-image {
+	width: 150px;
+	height: 150px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	margin: 0.5em;
+}
+.box-image img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.cell-5 {
+	font-size: 8px;
+	grid-area: credits;
+	border-top: 2px dotted orange;
+	border-bottom: 2px dotted orange;
+}
+.cell-5 h4 {
+	text-align: center;
+}
+
+.footer {
+	border-top: 0.5em solid #035781;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: grid;
+	grid:
+		'logo paris paris'
+		'dest . .'
+		'dest . .'
+		'link link link';
+	margin-left: 2em;
+	margin-right: 4em;
+	font-size: 12px;
+	grid-gap: 6em;
+}
+.footer-cell {
+	background: #d9e1e9;
+	padding: 0.5em;
+}
+.footer-cell h3 {
+	border-bottom: 1px solid orange;
+}
+.footer-logo {
+	grid-area: logo;
+}
+.footer-paris {
+	grid-area: paris;
+	text-align: center;
+}
+.footer-paris img {
+	max-height: 100%;
+	height: 100%;
+}
+
+.footer-destinations {
+	grid-area: dest;
+}
+.footer-link {
+	grid-area: link;
+	text-align: center;
+}
+.footer-link a {
+	color: orange;
+	text-decoration: none;
+}
